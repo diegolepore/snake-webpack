@@ -1,0 +1,67 @@
+/**
+ * index.scss
+ * - Add any styles you want here!
+ */
+
+ * {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #273c75;
+  }
+
+  #info {
+    color: #fff;
+    font-family: 'Nerko One', cursive;
+  }
+  
+  .snake {
+    text-align: center;
+    
+    &__board {
+      display: inline-block;
+      flex-direction: column;
+      border-top: 1px solid;
+      border-left: 1px solid;
+      position: relative;
+      
+      &-row {
+        display: flex;
+      }
+      &-col {
+        background-color: #fff;
+        border-bottom: 1px solid;
+        border-right: 1px solid;
+        width: 20px;
+        height: 20px;
+      }
+    }  
+    
+    &__body {
+      position: relative;
+      
+      &-item {
+        position: absolute;
+        width:20px;
+        height: 20px;
+        background-color: #44bd32;
+      }
+    }
+  
+    &__apple {
+      position: absolute;
+      
+      &:before {
+        content: "🍎";
+        width:20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
